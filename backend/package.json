@@ -60,5 +60,11 @@
     "typescript-eslint": "^8.69.0",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^4.1.2"
+  },
+  "allowScripts": {
+    "@prisma/engines@7.10.0": true,
+    "prisma@7.10.0": true,
+    "fsevents@2.3.3": true,
+    "@embedded-postgres/darwin-arm64@18.1.0-beta.15": true
   }
 }

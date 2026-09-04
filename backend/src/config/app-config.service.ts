@@ -77,7 +77,12 @@ export class AppConfigService {
   }
 
   get placesProvider(): string {
-    // mock=离线确定性目录；接入真实服务（如 Google Places）后按此值切换实现。
+    // mock=离线确定性目录；amap=高德 Web服务 API（真实 POI/交通/营业时间）
     return this.config.get('PLACES_PROVIDER', 'mock');
+  }
+
+  get amapApiKey(): string {
+    // 高德地图 Web服务 API Key（PLACES_PROVIDER=amap 时必填）
+    return this.config.get('AMAP_API_KEY', '');
   }
 }

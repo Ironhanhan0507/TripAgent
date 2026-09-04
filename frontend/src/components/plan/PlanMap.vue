@@ -103,8 +103,9 @@ onMounted(() => {
   if (!mapEl.value) return
   map = L.map(mapEl.value, { zoomControl: false }).setView([30, 110], 10)
   L.control.zoom({ position: 'bottomright' }).addTo(map)
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors',
+  L.tileLayer('https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
+    attribution: '&copy; 高德地图',
+    subdomains: ['1', '2', '3', '4'],
     maxZoom: 19,
   }).addTo(map)
   layerGroup = L.layerGroup().addTo(map)
